@@ -1,11 +1,23 @@
 #include <jni.h>
-#include <iostream>
+#include <stdio.h>
 #include "B1.h"
-
-using namespace std;
-
-JNIEXPORT jint JNICALL Java_B1_add(JNIEnv *env, jobject obj, jint a, jint b) {
-    jint result = a + b;
-    cout << a << " + " << b << " = " << result << endl;
-    return result;
+JNIEXPORT int JNICALL Java_B1_add(JNIEnv *env, jobject obj, jint a, jint b)
+{
+printf("\n%d + %d = %d\n",a,b,(a+b));
+return;
+}
+JNIEXPORT int JNICALL Java_B1_sub(JNIEnv *env, jobject obj, jint a, jint b)
+{
+ printf("\n%d - %d = %d\n",a,b,(a-b));
+ return;
+}
+JNIEXPORT int JNICALL Java_B1_mult(JNIEnv *env, jobject obj, jint a, jint b)
+{
+ printf("\n%d * %d = %d\n",a,b,(a*b));
+ return;
+}
+JNIEXPORT int JNICALL Java_B1_div(JNIEnv *env, jobject obj, jint a, jint b)
+{
+ printf("\n%d / %d = %d\n",a,b,(a/b));
+ return;
 }
