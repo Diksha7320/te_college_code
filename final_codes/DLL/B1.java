@@ -43,3 +43,8 @@ class B1
 		while(ch<5);
 	}
 }
+//Execution steps for dll
+// javac B1.java
+// javah -jni B1
+// gcc -I/usr/lib/jvm/java-7-openjdk-amd64/include -I/usr/lib/jvm/java-7-openjdk-amd64/include/linux -o libB1.so -shared -fPIC B1.c
+// java -Djava.library.path=. B1
